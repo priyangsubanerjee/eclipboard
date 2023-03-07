@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 function Introduction() {
   return (
@@ -29,24 +30,33 @@ function Introduction() {
         </ul>
         <div className="w-fit bg-white border h-fit rounded-md py-3 mt-10">
           <p className="text-zinc-500 text-xs px-3">powered by</p>
-          <div className="mt-3 flex items-center px-6 lg:px-8 space-x-9 w-full overflow-auto">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzR2hP6PRY3MB-itUTtITVE2cazvo5lXiwgXf-UykuiR1jJlIVhJz9Gj4gFaR57OjFSw&usqp=CAU"
-              className="h-7 lg:h-8"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png"
-              className="h-9 lg:h-10"
-            />
-            <img
-              src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png"
-              className="h-20 lg:h-20"
-            />
-
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vercel_logo_black.svg/2560px-Vercel_logo_black.svg.png"
-              className="h-5 lg:h-5"
-            />
+          <div className="mt-3">
+            <Marquee>
+              <div className="mr-12">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzR2hP6PRY3MB-itUTtITVE2cazvo5lXiwgXf-UykuiR1jJlIVhJz9Gj4gFaR57OjFSw&usqp=CAU"
+                  className="h-7 lg:h-8"
+                />
+              </div>
+              <div className="mr-12">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png"
+                  className="h-9 lg:h-10"
+                />
+              </div>
+              <div className="mr-12">
+                <img
+                  src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png"
+                  className="h-20 lg:h-20"
+                />
+              </div>
+              <div className="mr-12">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vercel_logo_black.svg/2560px-Vercel_logo_black.svg.png"
+                  className="h-5 lg:h-5"
+                />
+              </div>
+            </Marquee>
           </div>
         </div>
         <div className="mt-20 mb-10">
