@@ -2,10 +2,14 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function Login() {
   return (
     <div>
+      <Head>
+        <meta name="theme-color" content="#fff" />
+      </Head>
       <div className="flex flex-col lg:items-center lg:justify-center lg:mt-28">
         <form className="bg-white lg:w-[500px] p-7">
           <div>

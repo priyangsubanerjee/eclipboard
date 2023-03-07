@@ -2,12 +2,16 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function Register() {
   const router = useRouter();
   return (
     <div>
-      <div className="flex items-center justify-center mt-28">
+      <Head>
+        <meta name="theme-color" content="#fff" />
+      </Head>
+      <div className="flex lg:items-center lg:justify-center lg:mt-28">
         <form className="bg-white w-[500px] p-7">
           <div>
             <Link href={"/"}>
