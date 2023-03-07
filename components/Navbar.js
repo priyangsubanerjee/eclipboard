@@ -10,6 +10,8 @@ function Navbar() {
   useLayoutEffect(() => {
     if (checkIfLoggedIn()) {
       setLoggedIn(true);
+    } else {
+      setLoggedIn(false);
     }
   }, []);
 
