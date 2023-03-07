@@ -45,7 +45,7 @@ function Navbar() {
       {loggedIn == true && (
         <div className="flex items-center lg:space-x-7 ml-auto">
           <Link href={"/dashboard"}>
-            <button className="bg-zinc-800 px-4 py-2 rounded text-white font-medium text-sm hover:bg-black transition-all duration-500">
+            <button className="bg-zinc-800 hidden lg:block px-4 py-2 rounded text-white font-medium text-sm hover:bg-black transition-all duration-500">
               Dashboard
             </button>
           </Link>
