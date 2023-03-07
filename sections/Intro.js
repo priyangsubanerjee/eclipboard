@@ -80,7 +80,7 @@ function Introduction() {
         </div>
       </div>
       <div className="hidden md:flex items-center justify-center pl-10">
-        <img src="/iphone.png" alt="" className="w-[400px]" />
+        <img src="/iphone.png" alt="" className="w-[350px] -mt-10" />
       </div>
     </div>
   );
