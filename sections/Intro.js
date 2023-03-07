@@ -28,7 +28,7 @@ function Introduction() {
           <li>Share with anyone &amp; anywhere.</li>
           <li>Sync your clipboard across all your devices.</li>
         </ul>
-        <div className="w-fit bg-white border h-fit rounded-md py-3 mt-10">
+        <div className="w-full bg-white border h-fit rounded-md py-3 mt-10">
           <p className="text-zinc-500 text-xs px-3">powered by</p>
           <div className="mt-3">
             <Marquee>

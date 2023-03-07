@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="h-16 flex items-center px-7 lg:px-44 border-b bg-white">
+    <div className="h-16 w-full flex items-center px-7 lg:px-44 border-b bg-white">
       <div>
         <h1 className="text-2xl text-zinc-800  font-pacifico">eClipboard</h1>
       </div>

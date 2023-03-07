@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 function Login() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center lg:mt-28">
+      <div className="flex flex-col lg:items-center lg:justify-center lg:mt-28">
         <form className="bg-white lg:w-[500px] p-7">
           <div>
             <Link href={"/"}>
