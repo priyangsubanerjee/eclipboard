@@ -8,7 +8,7 @@ function Navbar() {
   const [loggedIn, setLoggedIn] = useState(null);
 
   useLayoutEffect(() => {
-    if (checkIfLoggedIn()) {
+    if (checkIfLoggedIn() == true) {
       setLoggedIn(true);
     } else {
       setLoggedIn(false);
