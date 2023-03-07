@@ -40,21 +40,21 @@ function Register() {
           <input
             type="text"
             placeholder="Name"
-            className="border-b py-3 w-full mt-6 outline-none"
+            className="border-b py-3 w-full mt-6 outline-none rounded-none"
             name=""
             id=""
           />
           <input
             type="text"
             placeholder="Email address"
-            className="border-b py-3 w-full mt-4 outline-none"
+            className="border-b py-3 w-full mt-4 outline-none rounded-none"
             name=""
             id=""
           />
           <input
             type="text"
             placeholder="Password"
-            className="border-b py-3 w-full mt-4 outline-none"
+            className="border-b py-3 w-full mt-4 outline-none rounded-none"
             name=""
             id=""
           />
