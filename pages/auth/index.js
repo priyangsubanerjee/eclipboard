@@ -1,8 +1,6 @@
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import React from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import React from "react";
 
 function Login() {
   return (

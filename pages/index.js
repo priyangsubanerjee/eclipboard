@@ -5,8 +5,10 @@ import Navbar from "@/components/Navbar";
 import Introduction from "@/sections/Intro";
 import Head from "next/head";
 import Image from "next/image";
+import { useLayoutEffect } from "react";
 
 export default function Home() {
+  useLayoutEffect(() => {}, []);
   return (
     <div>
       <Navbar />

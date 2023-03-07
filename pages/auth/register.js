@@ -1,18 +1,46 @@
-import Navbar from "@/components/Navbar";
-import Link from "next/link";
-import React from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import { createAccount } from "@/helper/account";
+import { encrypt } from "@/helper/crypto";
+import Loader from "@/components/Loader";
 
 function Register() {
-  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const res = await createAccount(user.name, user.email, user.password);
+    if (res.success) {
+      const account = res.data;
+      const enc = encrypt(JSON.stringify(account));
+      localStorage.setItem("account", JSON.stringify(enc));
+      setLoading(false);
+      setUser({
+        name: "",
+        email: "",
+        password: "",
+      });
+      window.location.href = "/";
+    }
+  };
+
   return (
     <div>
       <Head>
         <meta name="theme-color" content="#fff" />
       </Head>
       <div className="flex lg:items-center lg:justify-center lg:mt-28">
-        <form className="bg-white w-[500px] p-7">
+        <form
+          onSubmit={(e) => handleSubmit(e)}
+          className="bg-white w-[500px] p-7"
+        >
           <div>
             <Link href={"/"}>
               <button>
@@ -40,6 +68,8 @@ function Register() {
           <input
             type="text"
             placeholder="Name"
+            value={user.name}
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
             className="border-b py-3 w-full mt-6 outline-none rounded-none"
             name=""
             id=""
@@ -47,6 +77,8 @@ function Register() {
           <input
             type="text"
             placeholder="Email address"
+            value={user.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
             className="border-b py-3 w-full mt-4 outline-none rounded-none"
             name=""
             id=""
@@ -54,12 +86,17 @@ function Register() {
           <input
             type="text"
             placeholder="Password"
+            value={user.password}
+            onChange={(e) => setUser({ ...user, password: e.target.value })}
             className="border-b py-3 w-full mt-4 outline-none rounded-none"
             name=""
             id=""
           />
 
-          <button className="py-3 w-full rounded-md bg-zinc-800 mt-12 text-white font-medium hover:bg-black transition-all duration-500">
+          <button
+            type="submit"
+            className="py-3 w-full rounded-md bg-zinc-800 mt-12 text-white font-medium hover:bg-black transition-all duration-500"
+          >
             Continue
           </button>
           <p className="text-sm text-zinc-700 mt-10">
@@ -70,6 +107,7 @@ function Register() {
           </p>
         </form>
       </div>
+      <Loader loading={loading} />
     </div>
   );
 }
