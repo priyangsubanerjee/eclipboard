@@ -73,7 +73,10 @@ function Introduction() {
               </svg>
             </span>{" "}
             by{" "}
-            <a className="text-blue-600" href="">
+            <a
+              className="text-blue-600"
+              href="https://priyangsubanerjee.vercel.app"
+            >
               @priyangsubanerjee
             </a>
           </p>
