@@ -67,7 +67,7 @@ function Navbar() {
                 />
               </svg>
             </Popover.Button>
-            <Popover.Panel className="absolute left-1/2 -translate-x-1/2 z-10 w-32 bg-white border p-2 shadow-xl">
+            <Popover.Panel className="absolute right-0 lg:left-1/2 lg:-translate-x-1/2 z-10 w-32 bg-white border p-2 shadow-xl">
               <ul className="text-sm">
                 <li className="text-zinc-800 flex items-center space-x-1 hover:bg-zinc-100 p-2 rounded cursor-pointer">
                   <svg
