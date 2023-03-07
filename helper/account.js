@@ -36,7 +36,7 @@ const createAccount = async (name, email, password) => {
   }
 };
 
-const checkIfLoggedIn = async () => {
+const checkIfLoggedIn = () => {
   const account = JSON.parse(localStorage.getItem("account"));
   if (account) {
     const dec = JSON.parse(decrypt(account));
