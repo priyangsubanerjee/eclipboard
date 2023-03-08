@@ -1,14 +1,5 @@
-import "@/styles/globals.css";
-import Head from "next/head";
+import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
-  return (
-    <div>
-      <Head>
-        <title>eClipper | Paste anywhere</title>
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-      </Head>
-      <Component {...pageProps} />
-    </div>
-  );
+  return <Component {...pageProps} />
 }
